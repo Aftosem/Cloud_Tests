@@ -1,7 +1,5 @@
 
-
-#if __name__ == "__main__":
-class CL_test:
+class doActions_test:
     def getPath(self):
-        path = input("?>")
+        path = input("Enter CC ip https://192.168.0.")
         return path

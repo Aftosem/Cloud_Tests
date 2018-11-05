@@ -1,12 +1,12 @@
 import unittest
 from selenium import webdriver
-from Smoke_Clouds.For_test.Actions import CL_test
+from Smoke_Clouds.For_test.Actions import doActions_test
 from selenium.webdriver.common.keys import Keys
 import time
 
 
-class BOXTest(unittest.TestCase, CL_test):
-    path = "https://192.168.0." + CL_test().getPath()
+class BOXTest(unittest.TestCase, doActions_test):
+    path = "https://192.168.0." + doActions_test().getPath()
 
     def setUp(self):
         self.driver = webdriver.Firefox(executable_path='C:\\drivers\\Selenium\\geckodriver-v0.23.0-win64\\geckodriver.exe')
@@ -40,5 +40,5 @@ class BOXTest(unittest.TestCase, CL_test):
         self.driver.quit()
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()

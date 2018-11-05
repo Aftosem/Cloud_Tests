@@ -4,10 +4,13 @@ from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from Smoke_Clouds.Clouds.Actions import Parametrs
 
 
 
 class BOXTest(unittest.TestCase):
+    path = Parametrs().getPath()
+    path = "https://192.168.0.70"
 
     def setUp(self):
         self.driver = webdriver.Firefox(executable_path='C:\\drivers\\Selenium\\geckodriver-v0.23.0-win64\\geckodriver.exe')
@@ -15,7 +18,6 @@ class BOXTest(unittest.TestCase):
 
     def test_BOX(self):
         driver = self.driver
-        path = "https://192.168.0.70"
 
         def actionStep():
             sTime(1)
@@ -30,8 +32,8 @@ class BOXTest(unittest.TestCase):
             time.sleep(t)
 
             #Enter
-        print("Start")
-        driver.get(path)
+        print("Start driver")
+        driver.get(BOXTest.path)
         login_field = driver.find_element_by_id("username")
         login_field.send_keys("Administrator")
         password_field = driver.find_element_by_id("password")
@@ -40,7 +42,7 @@ class BOXTest(unittest.TestCase):
         sTime(2)
 
             #Go to Cloud BOX
-        driver.get(path+"/setup/discovery/box-scan")
+        driver.get(BOXTest.path+"/setup/discovery/box-scan")
         sTime(2)
 
             #Set parameters
@@ -72,7 +74,6 @@ class BOXTest(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
 
 
 if __name__ == "__main__":
