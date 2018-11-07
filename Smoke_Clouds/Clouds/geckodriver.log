@@ -5099,3 +5099,211 @@ JavaScript warning: https://192.168.0.62/libs/extjs4/ext-all.js, line 18: unreac
 [Chil[GPU 16724, Ch
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1541590135343	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.RtKn07c4qLXV"
+1541590873708	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.F7sjJm2lTv1X"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1541590877325	Marionette	INFO	Listening on port 52122
+1541590877561	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541590877586	Marionette	DEBUG	[6442450945] Frame script loaded
+1541590877587	Marionette	DEBUG	[6442450945] Frame script registered
+1541590877751	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541590878258	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541590878539	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541590878605	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/login
+JavaScript error: https://192.168.0.62/login, line 67: ReferenceError: event is not defined
+1541590878673	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/login
+1541590879148	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/login
+1541590879149	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/login
+1541590880536	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/dashboard
+1541590880548	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/dashboard
+1541590882562	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/dashboard
+1541590882676	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/dashboard
+1541590882676	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/dashboard
+JavaScript warning: https://192.168.0.62/libs/extjs4/ext-all.js, line 18: unreachable code after return statement
+1541590883070	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/setup/discovery/dropbox-scan
+1541590883526	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/setup/discovery/dropbox-scan
+1541590886141	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590888470	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590892845	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590897234	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590897498	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590897765	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590898108	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541590903114	Marionette	INFO	Stopped listening on port 52122
+[Child 16452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16452, Chro[Parent 7816, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GPU 1
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1541591348473	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.9DLPZ1wYgs7R"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1541591351996	Marionette	INFO	Listening on port 52546
+1541591352383	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541591352410	Marionette	DEBUG	[6442450945] Frame script loaded
+1541591352425	Marionette	DEBUG	[6442450945] Frame script registered
+1541591352610	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541591353561	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541591353875	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541591354090	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/login
+JavaScript error: https://192.168.0.62/login, line 67: ReferenceError: event is not defined
+1541591354188	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/login
+1541591355131	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/login
+1541591355132	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/login
+1541591356455	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/dashboard
+1541591356463	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/dashboard
+1541591358478	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/dashboard
+1541591358591	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/dashboard
+1541591358591	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/dashboard
+JavaScript warning: https://192.168.0.62/libs/extjs4/ext-all.js, line 18: unreachable code after return statement
+1541591358999	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/setup/discovery/onedrive-scan
+1541591359481	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/setup/discovery/onedrive-scan
+1541591362093	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591364410	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591368789	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591373237	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591373476	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591373715	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591374045	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591379049	Marionette	INFO	Stopped listening on port 52546
+[Child 2780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 2780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12748, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 12748, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13688, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13[GP
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1541591562244	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.cLkImZe9RN12"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1541591565525	Marionette	INFO	Listening on port 52700
+1541591565608	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541591565631	Marionette	DEBUG	[6442450945] Frame script loaded
+1541591565632	Marionette	DEBUG	[6442450945] Frame script registered
+1541591565884	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541591567113	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541591567486	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541591567510	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/login
+JavaScript error: https://192.168.0.62/login, line 67: ReferenceError: event is not defined
+1541591567586	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/login
+1541591568013	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/login
+1541591568013	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/login
+1541591569183	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/dashboard
+1541591569192	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/dashboard
+1541591571200	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/dashboard
+1541591571290	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/dashboard
+1541591571290	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/dashboard
+JavaScript warning: https://192.168.0.62/libs/extjs4/ext-all.js, line 18: unreachable code after return statement
+1541591571703	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/setup/discovery/dropbox-scan
+1541591572175	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/setup/discovery/dropbox-scan
+1541591574758	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591577102	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591581479	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591585917	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591586166	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591586433	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591586772	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541591591776	Marionette	INFO	Stopped listening on port 52700
+[Parent 17152, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1984, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1984, Chrome_ChildThread] WA[Parent 17152, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16968, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1[GPU 11068, Ch
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1541591995872	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.t2WyBpZoPJvE"
+1541592009626	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.UOc7RuaSmS2R"
+1541592013021	Marionette	INFO	Listening on port 53033
+1541592013504	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541592013529	Marionette	DEBUG	[6442450945] Frame script loaded
+1541592013531	Marionette	DEBUG	[6442450945] Frame script registered
+1541592013623	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541592015707	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541592015980	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541592016026	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/login
+JavaScript error: https://192.168.0.62/login, line 67: ReferenceError: event is not defined
+1541592016096	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/login
+1541592016679	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/login
+1541592016679	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/login
+1541592017891	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/dashboard
+1541592017899	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/dashboard
+1541592019921	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/dashboard
+1541592020025	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/dashboard
+1541592020026	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/dashboard
+JavaScript warning: https://192.168.0.62/libs/extjs4/ext-all.js, line 18: unreachable code after return statement
+1541592020434	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/setup/discovery/dropbox-scan
+1541592020936	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/setup/discovery/dropbox-scan
+1541592023496	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592025807	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592030140	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592034576	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592034817	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592035058	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592035357	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541592040367	Marionette	INFO	Stopped listening on port 53033
+[Parent 7992, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 7992, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346[Child 7680, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+[Child[[Parent 7992, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16508, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1650[GPU
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1541594414224	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.LPMpgSDqXEBc"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1541594418140	Marionette	INFO	Listening on port 55498
+1541594418620	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541594418648	Marionette	DEBUG	[6442450945] Frame script loaded
+1541594418648	Marionette	DEBUG	[6442450945] Frame script registered
+1541594418742	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541594419137	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541594419852	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541594521392	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.HTIEvei1Lufc"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1541594525060	Marionette	INFO	Listening on port 55599
+1541594525285	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541594525313	Marionette	DEBUG	[6442450945] Frame script loaded
+1541594525330	Marionette	DEBUG	[6442450945] Frame script registered
+1541594525622	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541594526228	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541594526498	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541594526665	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/login
+JavaScript error: https://192.168.0.62/login, line 67: ReferenceError: event is not defined
+1541594660939	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\dmvbukin\\AppData\\Local\\Temp\\rust_mozprofile.EmDE7igmavO1"
+[GFX1-]: ClientLayerManager::BeginTransaction with IPC channel down. GPU process may have died.
+1541594664815	Marionette	INFO	Listening on port 55710
+1541594665288	Marionette	WARN	TLS certificate errors will be ignored for this session
+1541594665312	Marionette	DEBUG	[6442450945] Frame script loaded
+1541594665313	Marionette	DEBUG	[6442450945] Frame script registered
+1541594665481	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1541594665683	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1541594666117	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/login
+1541594666369	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/login
+JavaScript error: https://192.168.0.62/login, line 67: ReferenceError: event is not defined
+1541594666437	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/login
+1541594666740	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/login
+1541594666741	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/login
+1541594668205	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/dashboard
+1541594668214	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/dashboard
+1541594670229	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for https://192.168.0.62/dashboard
+1541594670336	Marionette	DEBUG	[6442450945] Received DOM event pagehide for https://192.168.0.62/dashboard
+1541594670336	Marionette	DEBUG	[6442450945] Received DOM event unload for https://192.168.0.62/dashboard
+JavaScript warning: https://192.168.0.62/libs/extjs4/ext-all.js, line 18: unreachable code after return statement
+1541594670746	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://192.168.0.62/setup/discovery/box-scan
+1541594671230	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://192.168.0.62/setup/discovery/box-scan
+1541594673778	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594676134	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594680531	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594684944	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594685188	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594685441	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594685739	Marionette	DEBUG	[6442450945] Canceled page load listener because no navigation has been detected
+1541594690748	Marionette	INFO	Stopped listening on port 55710
+[Child 11356, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11356, Chrome_Ch[Parent 1556, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16644, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16644, Chrome_ChildThread] WARNING: pipe error: [Parent 1556, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 17
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
