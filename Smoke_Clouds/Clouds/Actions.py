@@ -1,17 +1,26 @@
+
 class Parametrs:
-    pathP = ""
-    cycleP = int
-
-    def setPath(self):
-        Parametrs.pathP = input("Enter CC ip https://192.168.0.")
-
-    def setCycle(self):
-        Parametrs.cycleP = input("Enter how many times repeat = ")
 
     def getPath(self):
-        path = Parametrs.pathP
-        return path
+        pathP = input("Enter CC ip https://192.168.0.")
+        pathP = "https://192.168.0." + pathP
+        return pathP
 
     def getCycle(self):
-        cycle = Parametrs.cycleP
-        return cycle
+        cycleP = input("Enter how many times repeat = ")
+        return cycleP
+
+
+# class DoActions:
+#
+#     def sTime(self, t):
+#         time.sleep(t)
+#
+#     def actionStep(self, driver):
+#         DoActions().sTime(2)
+#         action = ActionChains(driver)
+#         action.send_keys(Keys.DOWN)
+#         action.perform()
+#         DoActions().sTime(2)
+#         action.send_keys(Keys.ENTER)
+#         action.perform()

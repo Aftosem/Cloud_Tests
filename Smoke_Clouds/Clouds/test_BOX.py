@@ -8,9 +8,9 @@ from Smoke_Clouds.Clouds.Actions import Parametrs
 
 
 
-class BOXTest(unittest.TestCase):
-    path = Parametrs().getPath()
-    path = "https://192.168.0.70"
+class BOXTest(unittest.TestCase, Parametrs):
+    pathP = Parametrs().getPath()
+    cycleP = Parametrs().getCycle()
 
     def setUp(self):
         self.driver = webdriver.Firefox(executable_path='C:\\drivers\\Selenium\\geckodriver-v0.23.0-win64\\geckodriver.exe')
@@ -18,43 +18,31 @@ class BOXTest(unittest.TestCase):
 
     def test_BOX(self):
         driver = self.driver
+        path = BOXTest.pathP
 
-        def actionStep():
-            sTime(1)
-            action = ActionChains(self.driver)
-            action.send_keys(Keys.DOWN)
-            action.perform()
-            sTime(1)
-            action.send_keys(Keys.ENTER)
-            action.perform()
-
-        def sTime(t):
-            time.sleep(t)
-
-            #Enter
-        print("Start driver")
-        driver.get(BOXTest.path)
+            #WEB_Enter
+        driver.get(path)
         login_field = driver.find_element_by_id("username")
         login_field.send_keys("Administrator")
         password_field = driver.find_element_by_id("password")
         password_field.send_keys("password")
         driver.find_element_by_id("_submit").click()
-        sTime(2)
+        BOXTest().sTime(2)
 
             #Go to Cloud BOX
-        driver.get(BOXTest.path+"/setup/discovery/box-scan")
-        sTime(2)
+        driver.get(path + "/setup/discovery/box-scan")
+        BOXTest().sTime(2)
 
             #Set parameters
         driver.find_element_by_id("addPath-btnInnerEl").click()
-        sTime(2)
+        BOXTest().sTime(2)
         driver.find_element_by_id("textfield-1025-inputEl").send_keys("ATest", str(datetime.now().strftime("_%Y-%m-%d_%H:%M")))
         driver.find_element_by_id("textfield-1026-inputEl").send_keys("https://app.box.com/folder/50535200360")
         #driver.find_element_by_id("boundlist-1068").find_element_by_class_name("icon-online").click()
         driver.find_element_by_id("combobox-1027-inputCell").click()
-        actionStep()
+        BOXTest().actionStep(2, driver)
         driver.find_element_by_id("combobox-1028-inputCell").click()
-        actionStep()
+        BOXTest().actionStep(2, driver)
         driver.find_element_by_id("button-1021-btnIconEl").click()
 
             #Schedule at now
@@ -69,11 +57,28 @@ class BOXTest(unittest.TestCase):
 
             #Start scan
         driver.find_element_by_id("button-1063-btnIconEl").click()
-        sTime(5)
+        BOXTest().sTime(5)
 
 
     def tearDown(self):
         self.driver.quit()
+
+##################################################_additionals functions_########################################
+
+
+    def sTime(self, t):
+        self.t = t
+        time.sleep(self.t)
+
+    def actionStep(self, t, dr):
+        BOXTest.sTime(self, t)
+        action = ActionChains(dr)
+        action.send_keys(Keys.DOWN)
+        action.perform()
+        BOXTest.sTime(self, t)
+        action.send_keys(Keys.ENTER)
+        action.perform()
+
 
 
 if __name__ == "__main__":

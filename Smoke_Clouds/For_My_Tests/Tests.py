@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-from Smoke_Clouds.For_test.Actions import doActions_test
+from Smoke_Clouds.For_My_Tests.Actions import doActions_test
 from selenium.webdriver.common.keys import Keys
 import time
 
