@@ -8,3 +8,7 @@ Environment:
 
 Logs:
     geckodriver.log - nested in parent project directory
+
+
+Coping logs on C:/ProgramData/GTB Technologies/ATLogs/Discovery/
+    Maximum logs = 5

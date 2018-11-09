@@ -1,6 +1,5 @@
 import unittest
 import time
-import sys
 import os
 import shutil
 from datetime import datetime
@@ -13,16 +12,14 @@ from Smoke_Clouds.Clouds.Actions import Parametrs
 
 class CloudsTest(unittest.TestCase, Parametrs):
 
-    pathP = Parametrs().getPath()
-    #cycleP = Parametrs().getCycle()
-    tBox = tDBox = tOD = checkC = start = False
+    tBox = tDBox = tOD = False
     activeCloud = "Cloud"
     presTime = str(datetime.now().strftime("_%Y-%m-%d_(%H.%M)"))
+    pathP = Parametrs().getPath()
+    #cycleP = Parametrs().getCycle()
+    scanCloud = Parametrs().askQuntityClouds()
 
     def setUp(self):
-        CloudsTest().askQuntityClouds()
-        if CloudsTest.checkC == False:
-            sys.exit()
     #Initiate WebDriver
         self.driver = webdriver.Firefox(executable_path=os.path.dirname(os.path.realpath(__file__)) + "\\geckodriver.exe")
         self.driver.implicitly_wait(10)
@@ -41,15 +38,15 @@ class CloudsTest(unittest.TestCase, Parametrs):
         CloudsTest().sTime(2)
 
             #Go to Clouds
-        if CloudsTest.tBox:
+        if CloudsTest.scanCloud == 2:
             driver.get(path + "/setup/discovery/box-scan")
             CloudsTest.activeCloud = "BOX"
             CloudsTest.tBox = False
-        elif CloudsTest.tDBox:
+        elif CloudsTest.scanCloud == 4:
             driver.get(path + "/setup/discovery/dropbox-scan")
             CloudsTest.activeCloud = "DropBox"
             CloudsTest.tDBox = False
-        elif CloudsTest.tOD:
+        elif CloudsTest.scanCloud == 5:
             driver.get(path + "/setup/discovery/onedrive-scan")
             CloudsTest.activeCloud = "OneDrive"
             CloudsTest.tOD = False
@@ -102,29 +99,6 @@ class CloudsTest(unittest.TestCase, Parametrs):
         action.send_keys(Keys.ENTER)
         action.perform()
 
-    def askQuntityClouds(self):
-        CloudsTest.sTime(self, 0.3)
-        print("\n")
-        if not CloudsTest.start:
-            B = input("Scan BOX Cloud? (Type y or n) - ")
-            CloudsTest.tBox = CloudsTest.comfirmChecker(B)
-            CloudsTest.start = CloudsTest.tBox
-        if not CloudsTest.start:
-            DB = input("Scan DropBox Cloud? (Type y or n) - ")
-            CloudsTest.tDBox = CloudsTest.comfirmChecker(DB)
-            CloudsTest.start = CloudsTest.tDBox
-        if not CloudsTest.start:
-            OD = input("Scan OneDrive Cloud? (Type y or n) - ")
-            CloudsTest.tOD = CloudsTest.comfirmChecker(OD)
-            CloudsTest.start = CloudsTest.tOD
-
-    def comfirmChecker(ans):
-        if ans == ("y" or "у"):
-            CloudsTest.checkC = True
-            return True
-        else:
-            return False
-
     def copyLogs(self):
         src = "C:\\ProgramData\\GTB Technologies\\eDiscovery\\Logs"
         destination = "C:\\ProgramData\\GTB Technologies\\ATLogs\\Discovery\\"
@@ -138,7 +112,7 @@ class CloudsTest(unittest.TestCase, Parametrs):
         sortedFiles = sorted(os.listdir(destination), key=os.path.dirname)
         maxFiles = 5
         if len(sortedFiles) > maxFiles:
-            for i in range(len(sortedFiles)-1, maxFiles-1, -1):
+            for i in range(0, len(sortedFiles)-maxFiles, 1):
                 shutil.rmtree(destination+sortedFiles[i], ignore_errors=True)
 
 
