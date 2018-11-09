@@ -1,4 +1,4 @@
-from Smoke_Clouds.Clouds import test_BOX
+from Smoke_Clouds.Clouds import test_Clouds
 import unittest
 
 
@@ -11,7 +11,7 @@ class preBegin:
         suite = unittest.TestSuite()
         runner = unittest.TextTestRunner(verbosity=3)
     #Suite former
-        suite.addTests(loader.loadTestsFromModule(test_BOX))
+        suite.addTests(loader.loadTestsFromModule(test_Clouds))
         # if preBegin.tDBox:
         #     suite.addTests(loader.loadTestsFromModule(№№№))
         # if preBegin.tOD:

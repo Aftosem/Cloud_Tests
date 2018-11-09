@@ -2,6 +2,7 @@
 class Parametrs:
 
     def getPath(self):
+        print("Set cloud auto-test parameters:\n")
         pathP = input("Enter CC ip https://192.168.0.")
         pathP = "https://192.168.0." + pathP
         return pathP

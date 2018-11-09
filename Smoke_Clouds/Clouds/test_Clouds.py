@@ -2,6 +2,7 @@ import unittest
 import time
 import sys
 import os
+import shutil
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -10,16 +11,17 @@ from Smoke_Clouds.Clouds.Actions import Parametrs
 
 
 
-class BOXTest(unittest.TestCase, Parametrs):
+class CloudsTest(unittest.TestCase, Parametrs):
 
     pathP = Parametrs().getPath()
-    cycleP = Parametrs().getCycle()
+    #cycleP = Parametrs().getCycle()
     tBox = tDBox = tOD = checkC = start = False
     activeCloud = "Cloud"
+    presTime = str(datetime.now().strftime("_%Y-%m-%d_(%H.%M)"))
 
     def setUp(self):
-        BOXTest().askQuntityClouds()
-        if BOXTest.checkC == False:
+        CloudsTest().askQuntityClouds()
+        if CloudsTest.checkC == False:
             sys.exit()
     #Initiate WebDriver
         self.driver = webdriver.Firefox(executable_path=os.path.dirname(os.path.realpath(__file__)) + "\\geckodriver.exe")
@@ -27,7 +29,7 @@ class BOXTest(unittest.TestCase, Parametrs):
 
     def test_BOX(self):
         driver = self.driver
-        path = BOXTest.pathP
+        path = CloudsTest.pathP
 
             #WEB_Enter
         driver.get(path)
@@ -36,33 +38,33 @@ class BOXTest(unittest.TestCase, Parametrs):
         password_field = driver.find_element_by_id("password")
         password_field.send_keys("password")
         driver.find_element_by_id("_submit").click()
-        BOXTest().sTime(2)
+        CloudsTest().sTime(2)
 
-            #Go to Cloud BOX
-        if BOXTest.tBox:
+            #Go to Clouds
+        if CloudsTest.tBox:
             driver.get(path + "/setup/discovery/box-scan")
-            BOXTest.activeCloud = "BOX"
-            BOXTest.tBox = False
-        elif BOXTest.tDBox:
+            CloudsTest.activeCloud = "BOX"
+            CloudsTest.tBox = False
+        elif CloudsTest.tDBox:
             driver.get(path + "/setup/discovery/dropbox-scan")
-            BOXTest.activeCloud = "DropBox"
-            BOXTest.tDBox = False
-        elif BOXTest.tOD:
+            CloudsTest.activeCloud = "DropBox"
+            CloudsTest.tDBox = False
+        elif CloudsTest.tOD:
             driver.get(path + "/setup/discovery/onedrive-scan")
-            BOXTest.activeCloud = "OneDrive"
-            BOXTest.tOD = False
-        BOXTest().sTime(2)
+            CloudsTest.activeCloud = "OneDrive"
+            CloudsTest.tOD = False
+        CloudsTest().sTime(2)
 
             #Set parameters
         driver.find_element_by_id("addPath-btnInnerEl").click()
-        BOXTest().sTime(2)
-        driver.find_element_by_id("textfield-1025-inputEl").send_keys("ATest_", BOXTest.activeCloud, str(datetime.now().strftime("_%Y-%m-%d_%H:%M")))
+        CloudsTest().sTime(2)
+        driver.find_element_by_id("textfield-1025-inputEl").send_keys("ATest_", CloudsTest.activeCloud, CloudsTest.presTime)
         driver.find_element_by_id("textfield-1026-inputEl").send_keys("https://app.box.com/folder/50535200360")
         #driver.find_element_by_id("boundlist-1068").find_element_by_class_name("icon-online").click()
         driver.find_element_by_id("combobox-1027-inputCell").click()
-        BOXTest().actionStep(2, driver)
+        CloudsTest().actionStep(2, driver)
         driver.find_element_by_id("combobox-1028-inputCell").click()
-        BOXTest().actionStep(2, driver)
+        CloudsTest().actionStep(2, driver)
         driver.find_element_by_id("button-1021-btnIconEl").click()
 
             #Schedule at now
@@ -77,10 +79,12 @@ class BOXTest(unittest.TestCase, Parametrs):
 
             #Start scan
         driver.find_element_by_id("button-1063-btnIconEl").click()
-        BOXTest().sTime(5)
+        CloudsTest().sTime(5)
 
 
     def tearDown(self):
+        CloudsTest().copyLogs()
+        CloudsTest.sTime(self, 2)
         self.driver.quit()
 
 ##################################################_additionals functions_########################################
@@ -90,35 +94,52 @@ class BOXTest(unittest.TestCase, Parametrs):
         time.sleep(self.t)
 
     def actionStep(self, t, dr):
-        BOXTest.sTime(self, t)
+        CloudsTest.sTime(self, t)
         action = ActionChains(dr)
         action.send_keys(Keys.DOWN)
         action.perform()
-        BOXTest.sTime(self, t)
+        CloudsTest.sTime(self, (t/2))
         action.send_keys(Keys.ENTER)
         action.perform()
 
     def askQuntityClouds(self):
-        BOXTest.sTime(self, 0.2)
-        if not BOXTest.start:
+        CloudsTest.sTime(self, 0.3)
+        print("\n")
+        if not CloudsTest.start:
             B = input("Scan BOX Cloud? (Type y or n) - ")
-            BOXTest.tBox = BOXTest.comfirmChecker(B)
-            BOXTest.start = BOXTest.tBox
-        if not BOXTest.start:
+            CloudsTest.tBox = CloudsTest.comfirmChecker(B)
+            CloudsTest.start = CloudsTest.tBox
+        if not CloudsTest.start:
             DB = input("Scan DropBox Cloud? (Type y or n) - ")
-            BOXTest.tDBox = BOXTest.comfirmChecker(DB)
-            BOXTest.start = BOXTest.tDBox
-        if not BOXTest.start:
+            CloudsTest.tDBox = CloudsTest.comfirmChecker(DB)
+            CloudsTest.start = CloudsTest.tDBox
+        if not CloudsTest.start:
             OD = input("Scan OneDrive Cloud? (Type y or n) - ")
-            BOXTest.tOD = BOXTest.comfirmChecker(OD)
-            BOXTest.start = BOXTest.tOD
+            CloudsTest.tOD = CloudsTest.comfirmChecker(OD)
+            CloudsTest.start = CloudsTest.tOD
 
     def comfirmChecker(ans):
         if ans == ("y" or "у"):
-            BOXTest.checkC = True
+            CloudsTest.checkC = True
             return True
         else:
             return False
+
+    def copyLogs(self):
+        src = "C:\\ProgramData\\GTB Technologies\\eDiscovery\\Logs"
+        destination = "C:\\ProgramData\\GTB Technologies\\ATLogs\\Discovery\\"
+        source = os.listdir(src)
+        if not os.path.exists(destination+CloudsTest.presTime):
+            os.makedirs(destination+CloudsTest.presTime)
+        for files in source:
+            full_file_name = os.path.join(src, files)
+            if files.endswith(".log"):
+                shutil.copy2(full_file_name, destination+CloudsTest.presTime)
+        sortedFiles = sorted(os.listdir(destination), key=os.path.dirname)
+        maxFiles = 5
+        if len(sortedFiles) > maxFiles:
+            for i in range(len(sortedFiles)-1, maxFiles-1, -1):
+                shutil.rmtree(destination+sortedFiles[i], ignore_errors=True)
 
 
 

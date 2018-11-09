@@ -23,7 +23,7 @@ else:
     _bootstrap.__name__ = 'importlib._bootstrap'
     _bootstrap.__package__ = 'importlib'
     try:
-        _bootstrap.__file__ = __file__.replace('test_BOX.py', '_bootstrap.py')
+        _bootstrap.__file__ = __file__.replace('test_Clouds.py', '_bootstrap.py')
     except NameError:
         # __file__ is not guaranteed to be defined, e.g. if this code gets
         # frozen by a tool like cx_Freeze.
@@ -40,7 +40,7 @@ else:
     _bootstrap_external.__name__ = 'importlib._bootstrap_external'
     _bootstrap_external.__package__ = 'importlib'
     try:
-        _bootstrap_external.__file__ = __file__.replace('test_BOX.py', '_bootstrap_external.py')
+        _bootstrap_external.__file__ = __file__.replace('test_Clouds.py', '_bootstrap_external.py')
     except NameError:
         # __file__ is not guaranteed to be defined, e.g. if this code gets
         # frozen by a tool like cx_Freeze.

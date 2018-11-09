@@ -312,8 +312,8 @@ class _ZipImportResourceReader(resources_abc.ResourceReader):
         fullname_path = Path(self.zipimporter.get_filename(self.fullname))
         relative_path = fullname_path.relative_to(self.zipimporter.archive)
         # Don't forget that fullname names a package, so its path will include
-        # test_BOX.py, which we want to ignore.
-        assert relative_path.name == 'test_BOX.py'
+        # test_Clouds.py, which we want to ignore.
+        assert relative_path.name == 'test_Clouds.py'
         package_path = relative_path.parent
         subdirs_seen = set()
         for filename in self.zipimporter._files:
