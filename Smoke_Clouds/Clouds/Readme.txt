@@ -10,5 +10,7 @@ Logs:
     geckodriver.log - nested in parent project directory
 
 
-Coping logs on C:/ProgramData/GTB Technologies/ATLogs/Discovery/
+Coping logs:
+    Path C:/ProgramData/GTB Technologies/ATLogs/Discovery/
     Maximum logs = 5
+    At now coping all discovery logs exactly after scheduled scan.

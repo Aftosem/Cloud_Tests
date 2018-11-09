@@ -2,6 +2,7 @@ import unittest
 import time
 import os
 import shutil
+import sys
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -12,7 +13,7 @@ from Smoke_Clouds.Clouds.Actions import Parametrs
 
 class CloudsTest(unittest.TestCase, Parametrs):
 
-    tBox = tDBox = tOD = False
+    tCitr = tBox = tGD = tDBox = tOD = tOD4 = tAz = False
     activeCloud = "Cloud"
     presTime = str(datetime.now().strftime("_%Y-%m-%d_(%H.%M)"))
     pathP = Parametrs().getPath()
@@ -38,10 +39,18 @@ class CloudsTest(unittest.TestCase, Parametrs):
         CloudsTest().sTime(2)
 
             #Go to Clouds
-        if CloudsTest.scanCloud == 2:
+        if CloudsTest.scanCloud == 1:
+            driver.get(path + "/setup/discovery/citrix-scan")
+            CloudsTest.activeCloud = "Citrix"
+            CloudsTest.tCitr = False
+        elif CloudsTest.scanCloud == 2:
             driver.get(path + "/setup/discovery/box-scan")
             CloudsTest.activeCloud = "BOX"
             CloudsTest.tBox = False
+        elif CloudsTest.scanCloud == 3:
+            driver.get(path + "/setup/discovery/googledrive-scan")
+            CloudsTest.activeCloud = "GoogleDrive"
+            CloudsTest.tGD = False
         elif CloudsTest.scanCloud == 4:
             driver.get(path + "/setup/discovery/dropbox-scan")
             CloudsTest.activeCloud = "DropBox"
@@ -50,6 +59,16 @@ class CloudsTest(unittest.TestCase, Parametrs):
             driver.get(path + "/setup/discovery/onedrive-scan")
             CloudsTest.activeCloud = "OneDrive"
             CloudsTest.tOD = False
+        elif CloudsTest.scanCloud == 6:
+            driver.get(path + "/setup/discovery/one-drive-for-business-scan")
+            CloudsTest.activeCloud = "OneDriveForBusiness"
+            CloudsTest.tOD4 = False
+        elif CloudsTest.scanCloud == 7:
+            driver.get(path + "/setup/discovery/azure-scan")
+            CloudsTest.activeCloud = "Azure"
+            CloudsTest.tAz = False
+        else:
+            sys.exit(3)
         CloudsTest().sTime(2)
 
             #Set parameters
