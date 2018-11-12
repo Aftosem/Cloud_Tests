@@ -11,6 +11,7 @@ Logs:
 
 
 Coping logs:
+    All logs will be copying from computer where script was started.
     Path C:/ProgramData/GTB Technologies/ATLogs/Discovery/
-    Maximum logs = 5
-    At now coping all discovery logs exactly after scheduled scan.
+    Maximum log directories = 5
+    At now copying all discovery logs exactly after scheduled scan.

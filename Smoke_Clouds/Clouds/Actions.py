@@ -42,17 +42,3 @@ class Parametrs:
             sys.exit(2)
         else:
             return ans
-
-# class DoActions:
-#
-#     def sTime(self, t):
-#         time.sleep(t)
-#
-#     def actionStep(self, driver):
-#         DoActions().sTime(2)
-#         action = ActionChains(driver)
-#         action.send_keys(Keys.DOWN)
-#         action.perform()
-#         DoActions().sTime(2)
-#         action.send_keys(Keys.ENTER)
-#         action.perform()
