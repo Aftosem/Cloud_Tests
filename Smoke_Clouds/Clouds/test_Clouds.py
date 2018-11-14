@@ -42,30 +42,37 @@ class CloudsTest(unittest.TestCase, Parametrs):
         if CloudsTest.scanCloud == 1:
             driver.get(path + "/setup/discovery/citrix-scan")
             CloudsTest.activeCloud = "Citrix"
+            CloudsTest.cloudURL = "https://gttb.sharefile.com/home/myfiles/fo179ac0-a1e9-44b1-be5a-cec87f9b1fdb"
             CloudsTest.tCitr = False
         elif CloudsTest.scanCloud == 2:
             driver.get(path + "/setup/discovery/box-scan")
             CloudsTest.activeCloud = "BOX"
+            CloudsTest.cloudURL = "https://app.box.com/folder/58315420329"
             CloudsTest.tBox = False
         elif CloudsTest.scanCloud == 3:
             driver.get(path + "/setup/discovery/googledrive-scan")
             CloudsTest.activeCloud = "GoogleDrive"
+            CloudsTest.cloudURL = "https://drive.google.com/drive/folders/1IOYLUcSwsFwJfva8WFLaJ0P3faCjm8ut?ogsrc=32"
             CloudsTest.tGD = False
         elif CloudsTest.scanCloud == 4:
             driver.get(path + "/setup/discovery/dropbox-scan")
             CloudsTest.activeCloud = "DropBox"
+            CloudsTest.cloudURL = "https://www.dropbox.com/home/Dima/ATest"
             CloudsTest.tDBox = False
         elif CloudsTest.scanCloud == 5:
             driver.get(path + "/setup/discovery/onedrive-scan")
             CloudsTest.activeCloud = "OneDrive"
+            CloudsTest.cloudURL = "https://onedrive.live.com/?id=69E878A83F70C432%211612&cid=69E878A83F70C432"
             CloudsTest.tOD = False
         elif CloudsTest.scanCloud == 6:
             driver.get(path + "/setup/discovery/one-drive-for-business-scan")
             CloudsTest.activeCloud = "OneDriveForBusiness"
+            CloudsTest.cloudURL = "https://gtbtech-my.sharepoint.com/personal/qa_gtbtech_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fqa_gtbtech_onmicrosoft_com%2FDocuments%2F4Dima%2FATest"
             CloudsTest.tOD4 = False
         elif CloudsTest.scanCloud == 7:
             driver.get(path + "/setup/discovery/azure-scan")
             CloudsTest.activeCloud = "Azure"
+            CloudsTest.cloudURL = "https://portal.azure.com/casualscan/"
             CloudsTest.tAz = False
         else:
             sys.exit(3)
@@ -75,7 +82,7 @@ class CloudsTest(unittest.TestCase, Parametrs):
         driver.find_element_by_id("addPath-btnInnerEl").click()
         CloudsTest().sTime(2)
         driver.find_element_by_id("textfield-1025-inputEl").send_keys("ATest_", CloudsTest.activeCloud, CloudsTest.presTime)
-        driver.find_element_by_id("textfield-1026-inputEl").send_keys("https://app.box.com/folder/50535200360")
+        driver.find_element_by_id("textfield-1026-inputEl").send_keys(CloudsTest.cloudURL)
         #driver.find_element_by_id("boundlist-1068").find_element_by_class_name("icon-online").click()
         driver.find_element_by_id("combobox-1027-inputCell").click()
         CloudsTest().actionStep(2, driver)
